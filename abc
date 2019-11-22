@@ -15,5 +15,12 @@ pipeline {
                 sh 'uname -a'
             }
         }
+        stage("Three") {
+            agent { label 'rhel' }
+            steps {
+                sh 'echo "Hello world" >> myfile.txt'
+                }
+                
+        }
     }
 }
