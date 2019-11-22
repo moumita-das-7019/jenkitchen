@@ -13,6 +13,7 @@ pipeline {
             steps {
                
                 sh 'uname -a'
+                sh 'touch myfile1.txt'
             }
         }
         stage("Three") {
