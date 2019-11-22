@@ -23,5 +23,11 @@ pipeline {
                 }
                 
         }
+        stage("Four") {
+            agent { label 'master' }
+            steps {
+                sh 'df -h'
+            }
+        }
     }
 }
