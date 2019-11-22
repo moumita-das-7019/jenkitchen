@@ -8,5 +8,10 @@ pipeline {
         sh 'hostname'
       }
     }
+    stage("Email") {
+    steps {
+    mail bcc: '', body: 'Build successful', cc: 'moumita.das7019@gmail.com', from: '', replyTo: '', subject: 'Build successful', to: 'madhuraghodgekar@gmail.com'
+    }
+    }
   }
 }
